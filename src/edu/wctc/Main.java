@@ -9,6 +9,29 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
+
+        //Item stuff = new Item("Laptop", "HP");
+        Clothing shirt = new Clothing("Shirt", "Under Armour", 2, "blue");
+
+        //System.out.println(stuff);
+        System.out.println(shirt);
+
+        Item hat = new Clothing("Hat", "Spiderman", 5, "Red");
+        Item folder = new SupplyItem("Folder", "red 2 pocket folder", "Grade 1");
+        List<Item> backpack = new ArrayList<>();
+        backpack.add(hat);
+        backpack.add(folder);
+        backpack.add(new SupplyItem("Notebook", "spiral", "Grade 1"));
+
+
+        for (Item i : backpack) {
+            System.out.println(i);
+        }
+
+
+    }
+
+    static void groceryItemDemo() {
         GroceryItem item = new GroceryItem();
         GroceryItem item2 = new GroceryItem("Apples", 2);
 
@@ -25,10 +48,9 @@ public class Main {
         for (GroceryItem thing : groceries) {
             System.out.printf(thing.toString());
         }
-
     }
 
-    static void Review() {
+    static void review() {
         String[] groceries;
         Scanner keyboard = new Scanner(System.in);
 
