@@ -1,10 +1,32 @@
 package edu.wctc;
 
 import java.nio.file.NoSuchFileException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
+    public static void main(String[] args) {
+        // write your code here
+        GroceryItem item = new GroceryItem();
+        GroceryItem item2 = new GroceryItem("Apples", 2);
+
+        System.out.println(item2.getName());
+        item.setName("Loaf");
+        System.out.println(item.getName());
+        item.setQuantity(1);
+        System.out.println(item.getQuantity());
+
+        List<GroceryItem> groceries = new ArrayList<>();
+        groceries.add(item);
+        groceries.add(item2);
+
+        for (GroceryItem thing : groceries) {
+            System.out.printf(thing.toString());
+        }
+
+    }
 
     static void Review() {
         String[] groceries;
@@ -31,9 +53,4 @@ public class Main {
 
     }
 
-
-    public static void main(String[] args) {
-        // write your code here
-        Review();
-    }
 }
