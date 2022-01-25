@@ -25,7 +25,11 @@ public class Main {
 
 
         for (Item i : backpack) {
-            System.out.println(i);
+
+            if (i instanceof SupplyItem)
+                System.out.printf("Name: %s\nDesc: %s", i.getName(), i.getDesc());
+            else
+                System.out.println(i);
         }
 
 
