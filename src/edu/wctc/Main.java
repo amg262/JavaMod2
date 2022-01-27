@@ -8,6 +8,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
+
+
+
+    }
+
+
+    static void Mod2Day1() {
         // write your code here
 
         //Item stuff = new Item("Laptop", "HP");
@@ -31,10 +39,7 @@ public class Main {
             else
                 System.out.println(i);
         }
-
-
     }
-
     static void groceryItemDemo() {
         GroceryItem item = new GroceryItem();
         GroceryItem item2 = new GroceryItem("Apples", 2);
