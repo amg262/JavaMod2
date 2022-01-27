@@ -47,15 +47,14 @@ public class Main {
             System.out.printf("\n%s %s", player2.getName(), player1.isAttacked(player2.dealsDamage()));
             doubleStrike(player2, player1);
 
-            Thread.sleep(3);
+            Thread.sleep(2000);
         }
     }
 
     static void doubleStrike(Character attacking, Character defending) {
         if (attacking instanceof CheatingCharacter) {
             if (((CheatingCharacter) attacking).attemptCheat()) {
-                System.out.printf("\n%s %s", attacking.getName(), defending.isAttacked(attacking.dealsDamage()));
-
+                System.out.printf("\n%s cheats and %s", attacking.getName(), defending.isAttacked(attacking.dealsDamage()));
             }
         }
         System.out.println();
